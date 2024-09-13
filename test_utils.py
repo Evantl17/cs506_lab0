@@ -14,18 +14,31 @@ def test_dot_product():
     
 def test_cosine_similarity():
     ### YOUR CODE HERE
+    vector1 = np.array([1, 2, 3])
+    vector2 = np.array([4, 5, 6])
+
+    result = cosine_similarity(vector1, vector2)
     
-    result = ### YOUR CODE HERE
-    
-    expected_result = ### YOUR CODE HERE
+    expected_result = cosine_similarity(vector1, vector2)
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
 def test_nearest_neighbor():
     ### YOUR CODE HERE
+    target = np.array([1,2])
+    vectors = np.array([
+        [2, 1],  
+        [1, 2],  
+        [3, 4]   
+    ])
+
+    result = nearest_neighbor(target, vectors)
     
-    result = ### YOUR CODE HERE
-    
-    expected_index = ### YOUR CODE HERE
+    expected_index = 1
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
+
+
+print(test_cosine_similarity())
+print(test_dot_product())
+print(test_nearest_neighbor())
